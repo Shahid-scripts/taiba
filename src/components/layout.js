@@ -10,8 +10,10 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
+import Footer from "./Footer"
 import "./bootstrap.min.css"
 import "./layout.css"
+
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -26,23 +28,18 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
-        }}
-      >
+      <Header />
+      
         <main>{children}</main>
-        <footer style={{
-          marginTop: `2rem`
-        }}>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.com">Gatsby</a>
+      <Footer />
+        <footer style={{ color: "000000"}}>
+          MADE IN INDIA Handcrafted Taiba Jewellery
+        <a href="mailto:shahid@script.io"> Email us</a> to ask anything. © 2020
+        , Design by
+        {` `}
+        <a href="https://www.shahidScript.com">Shahid's Script</a> ©{" "}
+        {new Date().getFullYear()}
         </footer>
-      </div>
     </>
   )
 }
