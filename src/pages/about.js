@@ -9,13 +9,13 @@ import HeroSection from "../components/section/HeroSection"
 import BackgroundSection from "../components/Globals/BackgroundSection"
 import Info from "../components/Home/Info"
 
-const IndexPage = ({ data }) => (
+const AboutPage = ({ data }) => (
   <Layout>
     <SEO title="Home" />
     <BackgroundSection 
       img={data.img.childImageSharp.fluid}
-      title="regular Taiba"
-      styleClass="default-background"
+      title="about us"
+      styleClass="about-background"
     />
     <Info />
     <HeroSection />
@@ -26,7 +26,7 @@ const IndexPage = ({ data }) => (
 
 export const query = graphql`
   {
-    img:file(relativePath:{eq:"default-background.jpeg"}){
+    img:file(relativePath:{eq:"about-background.jpeg"}){
       childImageSharp{
         fluid{
           ...GatsbyImageSharpFluid_tracedSVG
@@ -36,4 +36,4 @@ export const query = graphql`
   }
 `
 
-export default IndexPage
+export default AboutPage
