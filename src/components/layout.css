@@ -410,3 +410,7 @@ a {
   background: var(--mainYellow);
   color: var(--mainBrown);
 }
+.menu,
+.contact {
+  background: var(--mainGrey);
+}

@@ -8,6 +8,9 @@ import { FaGulp } from "react-icons/fa"
 import HeroSection from "../components/section/HeroSection"
 import BackgroundSection from "../components/Globals/BackgroundSection"
 import Info from "../components/Home/Info"
+import Menu from "../components/Home/Menu"
+import Products from "../components/Home/Products"
+import Contact from "../components/Home/Contact"
 
 const IndexPage = ({ data }) => (
   <Layout>
@@ -18,6 +21,9 @@ const IndexPage = ({ data }) => (
       styleClass="default-background"
     />
     <Info />
+    <Menu items={data.menu}/>
+    <Products />
+    <Contact />
     <HeroSection />
     
     <FaGulp />
@@ -33,6 +39,24 @@ export const query = graphql`
         }
       }
     }
+    menu:allContentfulTaibaItem{
+    edges{
+      node{
+        id
+        title
+        description{
+          description
+        }
+        price
+        category
+        image{
+          fixed(width:50,height:50){
+            ...GatsbyContentfulFixed_tracedSVG
+          }
+        }
+      }
+    }
+  }
   }
 `
 
