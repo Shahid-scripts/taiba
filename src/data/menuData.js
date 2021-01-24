@@ -11,8 +11,8 @@ export const menuData = [
     link: "/earrings",
   },
 
-  { title: "", icon: "/images/icons/more.svg", link: "/more" },
-  { title: "", icon: "/images/icons/search.svg", link: "/search" },
+  { title: "", icon: "/images/icons/more.svg", link: "/" },
+  { title: "", icon: "/images/icons/search.svg", link: "/" },
   { title: "", icon: "/images/icons/cart.svg", link: "/cart" },
   { title: "", icon: "/images/icons/account.svg", link: "/account" },
 ]
@@ -48,6 +48,12 @@ export const tooltipData = [
   },
   { title: "Sign out", icon: "/images/icons/signout.svg", link: "/logout" },
 ]
+
+export const loginData = [
+  { title: "Profile", icon: "/images/icons/profile.svg", link: "/profile" },
+  { title: "Profile", icon: "/images/icons/profile.svg", link: "/profile" },
+]
+
 
 export const footerData = [
   { title: "New Arrivals", icon: "/images/icons/home.svg", link: "/" },
